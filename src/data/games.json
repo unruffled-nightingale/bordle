@@ -1,0 +1,93 @@
+[
+  {
+    "from": "ES",
+    "to": "ZA",
+    "without": [
+      "MA"
+    ]
+  },
+  {
+    "from": "PT",
+    "to": "TR",
+    "without": []
+  },
+  {
+    "from": "EE",
+    "to": "GR",
+    "without": [
+      "RU"
+    ]
+  },
+  {
+    "from": "GE",
+    "to": "KG",
+    "without": [
+      "RU"
+    ]
+  },
+  {
+    "from": "GQ",
+    "to": "GM",
+    "without": [
+      "BF",
+      "ML",
+      "NE"
+    ]
+  },
+  {
+    "from": "SZ",
+    "to": "ER",
+    "without": []
+  },
+  {
+    "from": "MR",
+    "to": "DJ",
+    "without": []
+  },
+  {
+    "from": "PL",
+    "to": "OM",
+    "without": []
+  },
+  {
+    "from": "CA",
+    "to": "AR",
+    "without": [
+      "BR"
+    ]
+  },
+  {
+    "from": "MX",
+    "to": "PR",
+    "without": []
+  },
+  {
+    "from": "KZ",
+    "to": "VN",
+    "without": [
+      "CN"
+    ]
+  },
+  {
+    "from": "JP",
+    "to": "FI",
+    "without": []
+  },
+  {
+    "from": "PT",
+    "to": "BG",
+    "without": []
+  },
+  {
+    "from": "GL",
+    "to": "NG",
+    "without": []
+  },
+  {
+    "from": "MX",
+    "to": "GF",
+    "without": [
+      "BR"
+    ]
+  }
+]
