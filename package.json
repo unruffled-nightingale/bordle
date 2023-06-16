@@ -16,10 +16,13 @@
     "@types/node-dijkstra": "^2.5.3",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "cross-var": "^1.1.0",
     "dijkstrajs": "^1.0.3",
+    "dotenv-cli": "^7.2.1",
     "lodash": "^4.17.21",
     "node-dijkstra": "^2.5.0",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.24.1",
     "react-scripts": "5.0.1",
@@ -30,7 +33,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:build": "docker build -t bordle .",
+    "docker:run": "yarn run docker:build; docker run -p 3002:80 -d bordle",
+    "docker:tag": "yarn run docker:build; dotenv cross-var docker tag bordle %DOCKER_REGISTRY%/bordle:latest",
+    "docker:push": "yarn run docker:tag; dotenv cross-var docker push %DOCKER_REGISTRY%/bordle:latest",
+    "kube:apply": "yarn run docker:push; kubectl apply -f ./kube/deployment.yaml",
+    "kube:redeploy": "yarn run docker:push; kubectl rollout restart deploy bordle"
   },
   "eslintConfig": {
     "extends": [

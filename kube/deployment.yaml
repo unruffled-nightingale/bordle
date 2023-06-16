@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bordle
+  namespace: default
+  labels:
+    app: bordle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bordle
+  template:
+    metadata:
+      labels:
+        app: bordle
+    spec:
+      containers:
+        - name: bordle
+          image: unrufflednightingale/bordle:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
