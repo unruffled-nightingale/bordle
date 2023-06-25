@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bordle-ingress
@@ -15,7 +15,10 @@ spec:
     - host: bordle.unruffled-nightingale.com
       http:
         paths:
-          - path: /
-            backend:
-              serviceName: bordle
-              servicePort: 80
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: bordle
+              port:
+                number: 80
